@@ -1,4 +1,13 @@
-# devops-netology
-Repository from my educational projects 
+# В данном файле содержится описание правил, прописанных в файле .gitignore для каталога terraform, размещенном в данном репозитории
 
-This repository created following netology's lesson about version control system and Git introduction.
+1. '**/.terraform/*' - игнорируются все файлы, помещенные в директорию .terraform, созданную внутри данной директории.
+
+2. '*.tfstate' и *.tfstate.*' - все tfstate файлы (то есть файлы, которые хранят текущее состояние инфраструктуры, обновляются каждый раз при запуске команды `terraform apply`).
+
+3. 'crash.log' и 'crash.*.log' - все файлы, фиксирующие баги и сбои.
+
+4. '*.tfvars' и '*.tfvars.json' -  переменные среды в terraform, в том числе формата json ( текстовый формат обмена данными, основанный на JavaScript).
+
+5. 'override.tf', 'override.tf.json', '*_override.tf,' '*_override.tf.json' - файлы переопределения (позволяют  обновлять terraform  для локальной разработки, то есть определяют только те свойства, которые мы хотим обновить).
+
+6. '.terraformrc' и 'terraform.rc' - файлы, которые конфигурирует индивидуальные настройки поведения интерфейса командной строки,  применяются ко всем рабочим каталогам terraform (.terraformrc - все ОС, кроме Windows, terraform.rc - Windows).
